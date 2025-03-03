@@ -1,4 +1,20 @@
+// Fonction pour initialiser Google Translate (doit être globale)
+function loadGoogleTranslate() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'fr',
+    includedLanguages: 'en',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Fonction pour charger le script Google Translate de manière asynchrone
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate';
+    document.head.appendChild(script);
+    
     // Gestion du formulaire
     document.getElementById('demo-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -94,4 +110,4 @@ document.addEventListener('DOMContentLoaded', function() {
         icon.classList.add('fa-bars');
       }
     });
-  });
+});

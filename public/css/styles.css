@@ -539,3 +539,128 @@
     position: relative;
   }
 }
+
+/* Styles pour la section What is DSR */
+.what-is-dsr {
+  padding: 120px 0;
+  background-color: white;
+  position: relative;
+}
+
+.what-is-dsr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0.2;
+}
+
+.dsr-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.dsr-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--gray);
+  margin-bottom: 30px;
+}
+
+.dsr-benefits {
+  list-style: none;
+  padding: 0;
+}
+
+.dsr-benefits li {
+  margin-bottom: 20px;
+  padding-left: 35px;
+  position: relative;
+  font-size: 16px;
+  color: var(--dark);
+}
+
+.dsr-benefits li i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--success);
+  font-size: 20px;
+  background: linear-gradient(135deg, var(--success), #34D399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dsr-benefits li:hover {
+  transform: translateX(10px);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .founders {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+/* Styles pour le widget Google Translate */
+#google_translate_element {
+  margin-left: 20px;
+}
+
+#google_translate_element .goog-te-gadget {
+  font-family: 'Inter', sans-serif;
+}
+
+#google_translate_element .goog-te-gadget-simple {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+#google_translate_element .goog-te-gadget-simple img {
+  display: none;
+}
+
+#google_translate_element .goog-te-menu-value {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#google_translate_element .goog-te-menu-value span {
+  color: var(--primary) !important;
+}
+
+#google_translate_element .goog-te-menu-value span:hover {
+  color: var(--secondary) !important;
+}
+
+@media (max-width: 768px) {
+  #google_translate_element {
+    margin: 15px 0;
+  }
+  
+  #google_translate_element .goog-te-gadget-simple {
+    width: 100%;
+    text-align: center;
+  }
+}
